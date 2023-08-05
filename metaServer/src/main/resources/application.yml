@@ -7,3 +7,10 @@ spring:
         core-size: 10
         max-size: 20
         queue-capacity: 1000
+zookeeper:
+#  addr: 10.243.137.17
+  namespace: minFS
+  sessionTimeout: 60000
+  connectionTimeoutMs: 15000
+  baseSleepTimeMs: 1000
+  maxRetries: 3
