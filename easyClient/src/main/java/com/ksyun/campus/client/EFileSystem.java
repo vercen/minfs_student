@@ -19,8 +19,6 @@ public class EFileSystem extends FileSystem {
     }
 
     public FSInputStream open(String path) {
-
-
         return new FSInputStream();
     }
 
@@ -30,8 +28,6 @@ public class EFileSystem extends FileSystem {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
-
         return new FSOutputStream();
     }
 
@@ -44,7 +40,8 @@ public class EFileSystem extends FileSystem {
     }
 
     public boolean delete(String path) {
-        return false;
+
+        return true;
     }
 
     public StatInfo getFileStats(String path) {
