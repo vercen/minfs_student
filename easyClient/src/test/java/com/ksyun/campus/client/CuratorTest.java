@@ -3,10 +3,7 @@ package com.ksyun.campus.client;
 import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
-import org.apache.curator.framework.recipes.cache.NodeCache;
-import org.apache.curator.framework.recipes.cache.PathChildrenCache;
-import org.apache.curator.framework.recipes.cache.PathChildrenCacheEvent;
-import org.apache.curator.framework.recipes.cache.PathChildrenCacheListener;
+import org.apache.curator.framework.recipes.cache.*;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.data.Stat;
@@ -127,18 +124,30 @@ public class CuratorTest {
     @Test
     public void testWatch2() throws Exception {
         //创建监听对象
-        PathChildrenCache pathChildrenCache = new PathChildrenCache(Client, "/", true);
+//        PathChildrenCache pathChildrenCache = new PathChildrenCache(Client, "/", true);
         //添加监听事件
-        pathChildrenCache.getListenable().addListener(new PathChildrenCacheListener() {
-            @Override
-            public void childEvent(CuratorFramework curatorFramework, PathChildrenCacheEvent pathChildrenCacheEvent) throws Exception {
+        PathChildrenCache pathChildrenCache = new PathChildrenCache(Client, "/metaServer", true);
+        //添加监听事件
+        //监听器监听是否有主节点/metaServer
+        pathChildrenCache.getListenable().addListener((client, event)->{
+            //获取/metaServer下所有子节点,这些子节点就是metaServer信息
+            //对节点列表排序,获取最小序号的节点,该节点就是当前的主节点
+            //获取所有子节点
+            List<ChildData> currentData = pathChildrenCache.getCurrentData();
+            //System.out.println("------"+currentData);
+            //拿到第一个节点的data
+            ChildData childData = currentData.get(0);
+            byte[] data = childData.getData();
+            System.out.println("主节点"+new String(data));
 
-                    System.out.println(pathChildrenCacheEvent.getType());
-                    System.out.println(pathChildrenCacheEvent.getData().getPath());
-                    System.out.println(new String(pathChildrenCacheEvent.getData().getData()));
-            }
+
+
+            //System.out.println("主节点"+currentData.get(0).getData());
+
         });
-        //启动监听
+        //启动监听器
+        //pathChildrenCache.start();
+        //启动监听点[B@3fc66071
         pathChildrenCache.start(PathChildrenCache.StartMode.NORMAL);
         while (true){
 

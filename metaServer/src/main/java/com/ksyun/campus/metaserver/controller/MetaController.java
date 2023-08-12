@@ -1,7 +1,5 @@
 package com.ksyun.campus.metaserver.controller;
 
-import org.apache.curator.framework.CuratorFramework;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -12,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController("/")
 public class MetaController {
 
-    @Autowired
-    private CuratorFramework Client;
+    private static final String FILE_SYSTEM = "fileSystem";
+    //目录存放的集合
 
     @RequestMapping("stats")
     public ResponseEntity stats(@RequestHeader String fileSystem, @RequestParam String path) {
@@ -22,11 +20,14 @@ public class MetaController {
 
     @RequestMapping("create")
     public ResponseEntity createFile(@RequestHeader String fileSystem, @RequestParam String path) {
+
         return new ResponseEntity(HttpStatus.OK);
     }
 
     @RequestMapping("mkdir")
     public ResponseEntity mkdir(@RequestHeader String fileSystem, @RequestParam String path) {
+        //创建目录
+
         return new ResponseEntity(HttpStatus.OK);
     }
 
@@ -75,3 +76,4 @@ public class MetaController {
     }
 
 }
+

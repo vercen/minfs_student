@@ -1,7 +1,5 @@
-server:
-  port: 9000
 zookeeper:
-  #  addr: 10.243.137.17
+  addr: 10.243.137.17
   namespace: minFS
   sessionTimeout: 60000
   connectionTimeoutMs: 15000
