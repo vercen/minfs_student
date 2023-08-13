@@ -18,16 +18,45 @@
     <version>2.7.11</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
+
+
   <build>
     <plugins>
+      <!--<plugin>-->
+      <!--  <groupId>org.springframework.boot</groupId>-->
+      <!--  <artifactId>spring-boot-maven-plugin</artifactId>-->
+      <!--&lt;!&ndash;  打包的jar放到父项目的workpublish目录&ndash;&gt;-->
+      <!--&lt;!&ndash;  把bin目录也打包进去&ndash;&gt;-->
+      <!--  <configuration>-->
+      <!--    <outputDirectory>${project.parent.basedir}/workpublish</outputDirectory>-->
+      <!--  </configuration>-->
+      <!--</plugin>-->
+
       <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      <!--  打包的jar放到父项目的workpublish目录-->
-        <configuration>
-          <outputDirectory>${project.parent.basedir}/workpublish</outputDirectory>
-        </configuration>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.2.0</version>
+        <executions>
+          <execution>
+            <id>copy-bin-folder</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.basedir}/workpublish/bin</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>bin</directory>
+                  <includes>
+                    <include>**/*</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
+
 </project>
