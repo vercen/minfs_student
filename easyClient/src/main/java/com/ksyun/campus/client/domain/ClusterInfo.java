@@ -50,13 +50,34 @@ public class ClusterInfo {
         public void setPort(int port) {
             this.port = port;
         }
+
+        @Override
+        public String toString() {
+            return "MetaServerMsg{" +
+                    "host='" + host + '\'' +
+                    ", port=" + port +
+                    '}';
+        }
     }
     public class DataServerMsg{
         private String host;
         private int port;
+        //文件总数
         private int fileTotal;
+        //容量
         private int capacity;
+        //已使用容量
         private int useCapacity;
+
+        public DataServerMsg() {
+        }
+        public DataServerMsg(String host, int port, int fileTotal, int capacity, int useCapacity) {
+            this.host = host;
+            this.port = port;
+            this.fileTotal = fileTotal;
+            this.capacity = capacity;
+            this.useCapacity = useCapacity;
+        }
 
         public String getHost() {
             return host;
@@ -96,6 +117,17 @@ public class ClusterInfo {
 
         public void setUseCapacity(int useCapacity) {
             this.useCapacity = useCapacity;
+        }
+
+        @Override
+        public String toString() {
+            return "DataServerMsg{" +
+                    "host='" + host + '\'' +
+                    ", port=" + port +
+                    ", fileTotal=" + fileTotal +
+                    ", capacity=" + capacity +
+                    ", useCapacity=" + useCapacity +
+                    '}';
         }
     }
 

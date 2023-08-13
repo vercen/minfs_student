@@ -4,6 +4,7 @@ import com.ksyun.campus.client.domain.ClusterInfo;
 import com.ksyun.campus.client.domain.StatInfo;
 import org.apache.hc.client5.http.classic.HttpClient;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EFileSystem extends FileSystem {
@@ -57,6 +58,24 @@ public class EFileSystem extends FileSystem {
     public ClusterInfo getClusterInfo() {
 
         ClusterInfo clusterInfo = new ClusterInfo();
+        ClusterInfo.MetaServerMsg masterMetaServer = clusterInfo.new MetaServerMsg();
+        masterMetaServer.setHost("127.0.0.1");
+        masterMetaServer.setPort(8000);
+        clusterInfo.setMasterMetaServer(masterMetaServer);
+        ClusterInfo.MetaServerMsg slaveMetaServer = clusterInfo.new MetaServerMsg();
+        slaveMetaServer.setHost("127.0.0.1");
+        slaveMetaServer.setPort(8001);
+        clusterInfo.setSlaveMetaServer(slaveMetaServer);
+        ClusterInfo.DataServerMsg dataServerMsg1 = clusterInfo.new DataServerMsg("127.0.0.1", 9000, 10, 1000, 100);
+        ClusterInfo.DataServerMsg dataServerMsg2 = clusterInfo.new DataServerMsg("127.0.0.1", 9001, 10, 1000, 100);
+        ClusterInfo.DataServerMsg dataServerMsg3 = clusterInfo.new DataServerMsg("127.0.0.1", 9002, 10, 1000, 100);
+        ClusterInfo.DataServerMsg dataServerMsg4 = clusterInfo.new DataServerMsg("127.0.0.1", 9003, 10, 1000, 100);
+        ArrayList<ClusterInfo.DataServerMsg> dataServerMsgs = new ArrayList<>();
+        dataServerMsgs.add(dataServerMsg1);
+        dataServerMsgs.add(dataServerMsg2);
+        dataServerMsgs.add(dataServerMsg3);
+        dataServerMsgs.add(dataServerMsg4);
+        clusterInfo.setDataServer(dataServerMsgs);
         return clusterInfo;
     }
 }
