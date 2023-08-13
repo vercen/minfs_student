@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/bash
 # Start the application
 # This script is called by the Dockerfile
 #一键启动脚本
