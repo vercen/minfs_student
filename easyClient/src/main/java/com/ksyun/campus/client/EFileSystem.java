@@ -1,6 +1,7 @@
 package com.ksyun.campus.client;
 
 import com.ksyun.campus.client.domain.ClusterInfo;
+import com.ksyun.campus.client.domain.FileType;
 import com.ksyun.campus.client.domain.StatInfo;
 import org.apache.hc.client5.http.classic.HttpClient;
 
@@ -24,11 +25,11 @@ public class EFileSystem extends FileSystem {
     }
 
     public FSOutputStream create(String path) {
-        try {
-            callRemote(path, "create");
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            callRemote(path, "create");
+//        } catch (Exception e) {
+//            throw new RuntimeException(e);
+//        }
         return new FSOutputStream();
     }
 
@@ -48,11 +49,29 @@ public class EFileSystem extends FileSystem {
     public StatInfo getFileStats(String path) {
         StatInfo statInfo = new StatInfo();
         statInfo.setPath(path);
+        statInfo.setSize(100);
+        statInfo.setMtime(System.currentTimeMillis());
+        statInfo.setType(FileType.File);
         return statInfo;
     }
 
     public List<StatInfo> listFileStats(String path) {
-        return null;
+        List<StatInfo> statInfos = new ArrayList<StatInfo>();
+        StatInfo statInfo = new StatInfo();
+        statInfo.setPath(path);
+        statInfo.setSize(100);
+        statInfo.setMtime(System.currentTimeMillis());
+        statInfo.setType(FileType.File);
+        statInfos.add(statInfo);
+        StatInfo statInfo1 = new StatInfo();
+        statInfo1.setPath(path);
+        statInfo1.setSize(100);
+        statInfo1.setMtime(System.currentTimeMillis());
+        statInfo1.setType(FileType.File);
+        statInfos.add(statInfo1);
+        return statInfos;
+
+//        return null;
     }
 
     public ClusterInfo getClusterInfo() {
