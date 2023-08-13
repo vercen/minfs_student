@@ -1,0 +1,81 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.11)
+
+2023-08-13 22:23:14.742  INFO 23762 --- [           main] c.k.c.dataserver.DataServerApplication   : Starting DataServerApplication v1.0 using Java 1.8.0_261 on VM-8-12-centos with PID 23762 (/root/wk4/minfs_student/workpublish/dataServer/dataServer-1.0.jar started by root in /root/wk4/minfs_student/workpublish/bin)
+2023-08-13 22:23:14.744  INFO 23762 --- [           main] c.k.c.dataserver.DataServerApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-13 22:23:28.181  INFO 23762 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9003 (http)
+2023-08-13 22:23:28.403  INFO 23762 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-13 22:23:28.403  INFO 23762 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-08-13 22:23:30.363  INFO 23762 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-13 22:23:30.364  INFO 23762 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 14832 ms
+zookeeper addr: 10.0.0.201
++++++++++++++++++++++++++++++++
+10.0.0.201
+2023-08-13 22:23:35.279  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.5.7-f0fdd52973d373ffd9c86b81d99842dc2c7f660e, built on 02/10/2020 11:30 GMT
+2023-08-13 22:23:35.313  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=VM-8-12-centos
+2023-08-13 22:23:35.313  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_261
+2023-08-13 22:23:35.313  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2023-08-13 22:23:35.313  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=/usr/local/java/jdk1.8.0_261/jre
+2023-08-13 22:23:35.313  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=../dataServer/dataServer-1.0.jar
+2023-08-13 22:23:35.313  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2023-08-13 22:23:35.313  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=/tmp
+2023-08-13 22:23:35.314  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2023-08-13 22:23:35.314  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Linux
+2023-08-13 22:23:35.314  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=amd64
+2023-08-13 22:23:35.314  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=3.10.0-1160.88.1.el7.x86_64
+2023-08-13 22:23:35.314  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=root
+2023-08-13 22:23:35.314  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=/root
+2023-08-13 22:23:35.314  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=/root/wk4/minfs_student/workpublish/bin
+2023-08-13 22:23:35.314  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.free=13MB
+2023-08-13 22:23:35.314  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.max=483MB
+2023-08-13 22:23:35.314  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.total=31MB
+2023-08-13 22:23:35.314  INFO 23762 --- [           main] org.apache.curator.utils.Compatibility   : Using emulated InjectSessionExpiration
+2023-08-13 22:23:35.785  INFO 23762 --- [           main] o.a.c.f.imps.CuratorFrameworkImpl        : Starting
+2023-08-13 22:23:35.822  INFO 23762 --- [           main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.0.0.201 sessionTimeout=60000 watcher=org.apache.curator.ConnectionState@433d61fb
+2023-08-13 22:23:35.898  INFO 23762 --- [           main] org.apache.zookeeper.common.X509Util     : Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2023-08-13 22:23:35.963  INFO 23762 --- [           main] org.apache.zookeeper.ClientCnxnSocket    : jute.maxbuffer value is 4194304 Bytes
+2023-08-13 22:23:36.088  INFO 23762 --- [           main] org.apache.zookeeper.ClientCnxn          : zookeeper.request.timeout value is 0. feature enabled=
+2023-08-13 22:23:36.243  INFO 23762 --- [           main] o.a.c.f.imps.CuratorFrameworkImpl        : Default schema
+2023-08-13 22:23:36.311  INFO 23762 --- [0.0.0.201:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.0.0.201/10.0.0.201:2181. Will not attempt to authenticate using SASL (unknown error)
+2023-08-13 22:23:40.756  INFO 23762 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9003 (http) with context path ''
+2023-08-13 22:23:41.285  INFO 23762 --- [           main] c.k.c.dataserver.DataServerApplication   : Started DataServerApplication in 33.079 seconds (JVM running for 38.258)
+2023-08-13 22:23:59.484  INFO 23762 --- [tor-Framework-0] o.a.c.f.state.ConnectionStateManager     : State change: SUSPENDED
+2023-08-13 22:23:59.488 ERROR 23762 --- [tor-Framework-0] o.a.c.f.imps.CuratorFrameworkImpl        : Background operation retry gave up
+
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:102) ~[zookeeper-3.5.7.jar!/:3.5.7]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.checkBackgroundRetry(CuratorFrameworkImpl.java:862) [curator-framework-4.2.0.jar!/:4.2.0]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.performBackgroundOperation(CuratorFrameworkImpl.java:990) [curator-framework-4.2.0.jar!/:4.2.0]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.backgroundOperationsLoop(CuratorFrameworkImpl.java:943) [curator-framework-4.2.0.jar!/:4.2.0]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.access$300(CuratorFrameworkImpl.java:66) [curator-framework-4.2.0.jar!/:4.2.0]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl$4.call(CuratorFrameworkImpl.java:346) [curator-framework-4.2.0.jar!/:4.2.0]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_261]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_261]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_261]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_261]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_261]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_261]
+
+2023-08-13 22:23:59.489 ERROR 23762 --- [tor-Framework-0] o.a.c.f.imps.CuratorFrameworkImpl        : Background retry gave up
+
+org.apache.curator.CuratorConnectionLossException: KeeperErrorCode = ConnectionLoss
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.performBackgroundOperation(CuratorFrameworkImpl.java:972) [curator-framework-4.2.0.jar!/:4.2.0]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.backgroundOperationsLoop(CuratorFrameworkImpl.java:943) [curator-framework-4.2.0.jar!/:4.2.0]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.access$300(CuratorFrameworkImpl.java:66) [curator-framework-4.2.0.jar!/:4.2.0]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl$4.call(CuratorFrameworkImpl.java:346) [curator-framework-4.2.0.jar!/:4.2.0]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_261]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_261]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_261]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_261]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_261]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_261]
+
+2023-08-13 22:24:29.486  INFO 23762 --- [tor-Framework-0] o.a.c.f.imps.CuratorFrameworkImpl        : backgroundOperationsLoop exiting
+2023-08-13 22:24:36.210  WARN 23762 --- [0.0.0.201:2181)] org.apache.zookeeper.ClientCnxn          : Client session timed out, have not heard from server in 60007ms for sessionid 0x0
+2023-08-13 22:24:36.313  INFO 23762 --- [ionShutdownHook] org.apache.zookeeper.ZooKeeper           : Session: 0x0 closed

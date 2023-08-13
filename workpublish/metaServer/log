@@ -1,0 +1,45 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.11)
+
+2023-08-13 22:23:14.660  INFO 23757 --- [           main] c.k.c.metaserver.MetaServerApplication   : Starting MetaServerApplication v1.0 using Java 1.8.0_261 on VM-8-12-centos with PID 23757 (/root/wk4/minfs_student/workpublish/metaServer/metaServer-1.0.jar started by root in /root/wk4/minfs_student/workpublish/bin)
+2023-08-13 22:23:14.663  INFO 23757 --- [           main] c.k.c.metaserver.MetaServerApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-13 22:23:29.152  INFO 23757 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2023-08-13 22:23:29.486  INFO 23757 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-13 22:23:29.487  INFO 23757 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-08-13 22:23:31.128  INFO 23757 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-13 22:23:31.128  INFO 23757 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 15667 ms
+zookeeper addr: 10.0.0.201
++++++++++++++++++++++++++++++++
+10.0.0.201
+2023-08-13 22:23:35.439  INFO 23757 --- [           main] org.apache.curator.utils.Compatibility   : Running in ZooKeeper 3.4.x compatibility mode
+2023-08-13 22:23:35.439  INFO 23757 --- [           main] org.apache.curator.utils.Compatibility   : Using emulated InjectSessionExpiration
+2023-08-13 22:23:35.770  INFO 23757 --- [           main] o.a.c.f.imps.CuratorFrameworkImpl        : Starting
+2023-08-13 22:23:35.911  INFO 23757 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2023-08-13 22:23:35.912  INFO 23757 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=VM-8-12-centos
+2023-08-13 22:23:35.912  INFO 23757 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_261
+2023-08-13 22:23:35.912  INFO 23757 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2023-08-13 22:23:35.912  INFO 23757 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=/usr/local/java/jdk1.8.0_261/jre
+2023-08-13 22:23:35.912  INFO 23757 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=../metaServer/metaServer-1.0.jar
+2023-08-13 22:23:35.912  INFO 23757 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2023-08-13 22:23:35.912  INFO 23757 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=/tmp
+2023-08-13 22:23:35.912  INFO 23757 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2023-08-13 22:23:35.912  INFO 23757 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Linux
+2023-08-13 22:23:35.912  INFO 23757 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=amd64
+2023-08-13 22:23:35.912  INFO 23757 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=3.10.0-1160.88.1.el7.x86_64
+2023-08-13 22:23:35.912  INFO 23757 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=root
+2023-08-13 22:23:35.912  INFO 23757 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=/root
+2023-08-13 22:23:35.912  INFO 23757 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=/root/wk4/minfs_student/workpublish/bin
+2023-08-13 22:23:35.913  INFO 23757 --- [           main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.0.0.201 sessionTimeout=60000 watcher=org.apache.curator.ConnectionState@1700915
+2023-08-13 22:23:36.265  INFO 23757 --- [           main] o.a.c.f.imps.CuratorFrameworkImpl        : Default schema
+2023-08-13 22:23:36.370  INFO 23757 --- [0.0.0.201:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.0.0.201/10.0.0.201:2181. Will not attempt to authenticate using SASL (unknown error)
+2023-08-13 22:23:41.838  INFO 23757 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2023-08-13 22:23:41.940  INFO 23757 --- [           main] c.k.c.metaserver.MetaServerApplication   : Started MetaServerApplication in 33.657 seconds (JVM running for 38.953)
+2023-08-13 22:24:29.517  INFO 23757 --- [tor-Framework-0] o.a.c.f.imps.CuratorFrameworkImpl        : backgroundOperationsLoop exiting
+2023-08-13 22:24:36.353  INFO 23757 --- [ionShutdownHook] org.apache.zookeeper.ZooKeeper           : Session: 0x0 closed
+2023-08-13 22:24:36.372  INFO 23757 --- [ain-EventThread] org.apache.zookeeper.ClientCnxn          : EventThread shut down
